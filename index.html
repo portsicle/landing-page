@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portsicle</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/portsicle.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+      .gradient-text {
+        background: linear-gradient(45deg, #4f46e5, #06b6d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .blob {
+        background: linear-gradient(
+          45deg,
+          rgba(79, 70, 229, 0.4) 0%,
+          rgba(6, 182, 212, 0.4) 100%
+        );
+        filter: blur(70px);
+      }
+      .card {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <div class="blob fixed top-0 left-0 w-1/2 h-1/2 rounded-full"></div>
+    <div class="blob fixed bottom-0 right-0 w-1/2 h-1/2 rounded-full"></div>
+
+    <header class="z-10 py-6 px-4 sm:px-6 lg:px-8">
+      <nav class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <img class="w-10" src="./assets/portsicle.png" alt="logo" />
+          <span class="text-2xl font-bold gradient-text">Portsicle</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#features" class="hover:text-indigo-400 transition-colors"
+            >Features</a
+          >
+          <a href="#usage" class="hover:text-indigo-400 transition-colors"
+            >Usage Guide</a
+          >
+          <a
+            href="https://github.com/portsicle"
+            target="_blank"
+            class="hover:text-indigo-400 transition-colors"
+            >GitHub</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow z-10">
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <h1
+            class="text-5xl sm:text-7xl font-bold mb-6 gradient-text leading-tight"
+          >
+            Expose Local Servers to <br />
+            Public Network (the internet).
+          </h1>
+          <p class="text-xl mb-10 max-w-2xl">
+            Portsicle: The open-source tunneling solution that brings your local
+            projects to the world stage.
+            <span class="text-[#06b6d4] font-bold">No deploy, all dazzle.</span>
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="https://github.com/portsicle/portsicle-client/releases/download/1.1.2/portsicle_win_x64.exe"
+              class="flex gap-2 items-center bg-indigo-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
+              >Download
+              <img class="w-6 h-6" src="./assets/windows.svg" alt="win"
+            /></a>
+            <a
+              href="https://github.com/portsicle/portsicle-client/releases/download/1.1.2/portsicle"
+              class="flex gap-2 items-center bg-cyan-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-cyan-700 transition duration-300 transform hover:scale-105"
+              >Download
+              <img class="w-6 h-6" src="./assets/linux.svg" alt="win" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-4xl font-bold mb-12 text-center gradient-text">
+            Why Use Portsicle?
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="card p-6 rounded-xl transform transition duration-500 hover:scale-105"
+            >
+              <div class="text-4xl mb-4">🚀</div>
+              <h3 class="text-xl font-semibold mb-2">Warp-Speed Setup</h3>
+              <p>
+                From zero to hero in seconds. Minimal configuration, maximum
+                impact. Download the binary and use it on the fly!
+              </p>
+            </div>
+            <div
+              class="card p-6 rounded-xl transform transition duration-500 hover:scale-105"
+            >
+              <div class="text-4xl mb-4">🔐</div>
+              <h3 class="text-xl font-semibold mb-2">Encrypted Tunnels</h3>
+              <p>
+                Your local server remains protected behind your firewall, while
+                still being accessible via Portsicle public URL.
+              </p>
+            </div>
+            <div
+              class="card p-6 rounded-xl transform transition duration-500 hover:scale-105"
+            >
+              <div class="text-4xl mb-4">💻</div>
+              <h3 class="text-xl font-semibold mb-2">Free and Open-Source</h3>
+              <p>
+                Peek under the hood, tweak to your heart's content. It's your
+                show! Contributions are welcomed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="usage"
+        class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-900 to-cyan-900"
+      >
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-4xl font-bold mb-12 text-center gradient-text">
+            How to use Portsicle?
+          </h2>
+          <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="bg-indigo-600 rounded-full p-2">
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">
+                    1. Launch Your Local Server
+                  </h3>
+                  <p>
+                    Fire up your local server and the use the
+                    <a
+                      href="https://github.com/portsicle/portsicle-client"
+                      class="text-[#06b6d4] font-bold hover:underline"
+                      >Portsicle CLI</a
+                    >
+                    which will connect you to Remote server.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="bg-cyan-600 rounded-full p-2">
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">
+                    2. Get a Secure URL
+                  </h3>
+                  <p>
+                    Portsicle server will provide a unique URL for your session.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="bg-indigo-600 rounded-full p-2">
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">
+                    3. Share it to anyone
+                  </h3>
+                  <p>
+                    Showcase your locally running apps to clients or
+                    stakeholders without deploying them.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative w-[90%] ml-5">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-lg transform -rotate-6"
+              ></div>
+              <img
+                src="./assets/portsicle.jpeg"
+                alt="How Portsicle Works"
+                class="relative rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="z-10 bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="flex items-center space-x-2 mb-4 md:mb-0">
+          <img class="w-10" src="./assets/portsicle.png" alt="logo" />
+          <span class="text-xl font-bold gradient-text">Portsicle</span>
+        </div>
+        <div class="flex space-x-6">
+          <span class="text-sm transition-colors"
+            >© 2025 Portsicle - Amit Suthar</span
+          >
+          <span>•</span>
+          <a
+            href="https://github.com/your-repo/portsicle"
+            class="text-sm hover:text-indigo-400 transition-colors"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      gsap.from(".gradient-text", {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        stagger: 0.2,
+      });
+      gsap.from(".card", { duration: 1, opacity: 0, y: 50, stagger: 0.2 });
+
+      const blob1 = document.querySelectorAll(".blob")[0];
+      const blob2 = document.querySelectorAll(".blob")[1];
+
+      document.addEventListener("mousemove", (e) => {
+        const { clientX, clientY } = e;
+        const x = Math.round((clientX / window.innerWidth) * 100);
+        const y = Math.round((clientY / window.innerHeight) * 100);
+
+        gsap.to(blob1, { duration: 0.5, x: `${x}%`, y: `${y}%` });
+        gsap.to(blob2, { duration: 0.5, x: `${100 - x}%`, y: `${100 - y}%` });
+      });
+    </script>
+  </body>
+</html>
